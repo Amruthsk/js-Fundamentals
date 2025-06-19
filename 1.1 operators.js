@@ -150,9 +150,9 @@ console.log(10 >> 1);// right shift
 console.log("unary operator");
 let a = 1;
 
-console.log(a);
+console.log(a);// a
 
-console.log(a++);
+console.log(a++);// post-increment - returns value before incrementing
 
 console.log(a);
 
@@ -160,7 +160,7 @@ let b = 1;
 
 console.log(b);
 
-console.log(++b);
+console.log(++b);// pre-increment - returns value after incrementing
 
 console.log(b);
 
@@ -169,7 +169,7 @@ let c = 1;
 
 console.log(c);
 
-console.log(c--);
+console.log(c--);// post-decrement - returns value before decrementing
 
 console.log(c);
 
@@ -177,6 +177,6 @@ let d = 1;
 
 console.log(d);
 
-console.log(--d);
+console.log(--d);// pre-decrement - returns value after decrementing
 
 console.log(d);

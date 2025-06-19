@@ -65,17 +65,17 @@ console.log(text5);
 //Nonprimitive - composition of other types object
 
 //Non-zero value - value - holder paper present
-//where non-zero value used - 
+//where 1 used - give sense of presence - value assigned - holder present
 //0 - zero value - no paper - holder present
-//where 0 used - 
+//where 0 used - give sense of zero value - value assigned - holder present
 // give sense of emptiness - null, undefined
 //null - no roll now- holder present
-//where null used - empty value - no value assigned - holder present
+//where null used - no value assigned - holder present but no value assigned
 let b = 10;
 b = null;
 
 //undefined - never given a value - no holder
-//where undefined used - no value assigned - no holder present
+//where undefined used - no value assigned - holder not present
 //allocated memory placeholder-undefined  until assined the value
 
 let a;
