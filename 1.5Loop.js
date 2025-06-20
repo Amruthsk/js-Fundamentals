@@ -18,7 +18,7 @@ if(p <= 10){
     console.log("i is less than or equal to 10");
 }   
 
-// print -> sum
+// print -> sum of all numbers from 1 to n
 
 //problem - program to calculate sum of all number
 //approach
