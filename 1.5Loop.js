@@ -41,8 +41,35 @@ function sumFromONe(n){
     return sum;
 }
 
+
+
 const sumOfNum = sumFromONe(10);
 console.log("sum of Number", sumOfNum);
+
+
+//problem: print the number from 20 to 1 in decreasing order using while loop
+
+//approach
+//input - 20 output - 20,19...1
+//n - parameter placeholder
+//i - variable to hold the current number
+//i = n - initial value
+//condition - i >= 1
+//loop from n to 1 - i = n; i >= 1; i--
+
+function printDecreasing(n){
+    let i = n;
+    while(i >= 1){
+        console.log(i);
+        i --;
+    }   
+}
+
+console.log("print decreasing order");
+printDecreasing(20);
+
+
+
 
 // do while loop
 //while loop
@@ -60,8 +87,37 @@ console.log("Loop ended");
 
 // for loop
 console.log("for loop")
+//for loop - entry control - checks condition before executing the loop
+console.log("for loop- printing numbers from 1 to 10");
 for(i=1;i<=10;i++){
     console.log(i);
 }
 console.log("Loop ended");
 
+//sum of numbers from 1 to n using for loop
+function sumFromOneFor(n){
+    let sum = 0;
+    for(let i = 1; i <= n; i++){
+        sum += i;
+    }
+    return sum;
+}
+
+//reverse order using for loop
+function printDecreasingFor(n){
+    for(let i = n; i >= 1; i--){
+        console.log(i);
+    }
+}
+
+//problem - print the even numbers from 1 to n using for loop
+function printEvenNumbers(n){
+    for(let i = 1; i <= n; i++){
+        if(i % 2 === 0){
+            console.log(i);
+        }
+    }
+}
+
+console.log("print even numbers from 1 to n");
+printEvenNumbers(25);
