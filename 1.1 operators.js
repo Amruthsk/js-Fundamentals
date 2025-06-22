@@ -148,21 +148,41 @@ console.log(10 >> 1);// right shift
 
 
 console.log("unary operator");
-let a = 1;
+//requires only operand
+//++ increment by 1 unit
+let a = 10;
 
 console.log(a);// a
 
-console.log(a++);// post-increment - returns value before incrementing
+console.log("a old value",a++);// post-increment - 1st returns a value before incrementing 2nd increment
 
-console.log(a);
+console.log('next step a increment',a);
+//increment after assignment
+let g = a++;
+console.log("value of a & g after post increment: ",a,g);
 
-let b = 1;
+let b = 10;
 
 console.log(b);
-
+// increment 
 console.log(++b);// pre-increment - returns value after incrementing
 
 console.log(b);
+
+//1st assign & then increment
+let w = 20;
+let u = w++;
+console.log("value of w & u after post increment:",w,u);
+w++;
+console.log("value of w & u after post increment:", w, u);
+
+//1st increment & then assign
+let e = 20;
+let t = ++e;
+console.log("value of e & t after pre increment:", e, t);
+e++;
+console.log("value of e & t after pre increment:", e, t);
+
 
 console.log('decrement')
 let c = 1;
