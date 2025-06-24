@@ -43,7 +43,7 @@
 
 //document-gets the element-penetrate(.)
 // getelementbyID into the particualr element
-//.innerHTML -property to pass the infor to html file
+//.innerHTML -property to pass the content from js to html file
 document.getElementById("msg").innerHTML = "This is H1 tag";
 
 //based on n know execute
