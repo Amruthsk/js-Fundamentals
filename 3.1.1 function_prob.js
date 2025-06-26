@@ -223,13 +223,21 @@ let pattern6 = pattern_6(5);
 console.log(pattern6);
 
 
-//pattern 7 problem- Given a value n - print the  Diamond pattern(space & star) n =3
+//pattern 7 problem- Given a value n n odd only- print the  Diamond pattern(space & star) n =3
 //   *
 //  ***
 // *****
 //  ***
 //   *
 
+//Approach
+//bd 2 parts
+//upper
+//loop for each row 
+//inside row loop for n-row space  & loop for (2*row)-1 concatenate space & star
+//lower
+//loop for each row  (n-1)
+//inside row loop for n-1 space  & loop for 2*(n-row)-1 concatenate space & star
 
 console.log("Diamond pattern7")
 
@@ -273,6 +281,7 @@ function Diamondpattern(n){
 let pattern7 = Diamondpattern(5);
 console.log(pattern7);
 
+console.log("hourglass")
 //hour glass
 function invertedDiamondpattern(n) {
   lowerTriangle(n);
@@ -281,3 +290,119 @@ function invertedDiamondpattern(n) {
 
 let pattern8 = invertedDiamondpattern(5);
 console.log(pattern8);
+
+
+console.log("Butterfly")
+//pattern - 9 
+//problem- Given a value n n-odd only- print the  butterfly pattern(space & star) n =3
+
+//Approach
+//bd 3 parts
+//upper
+//loop for each row (n-1)/2
+//inside row loop for row leftspace  & loop for n-2(row)  star & loop for row  right space concatenate left space & star & right star
+//middle
+//loop inside single row concatenate n stars
+//lower
+//loop for each row  (n-1)
+//inside row loop for n-1 space  & loop for 2*(n-row)-1 concatenate space & star
+
+function upper(n){
+  for (let row = 1; row <= (n - 1) / 2; row++) {
+    let star = " ";
+    for (let lstar = 1; lstar <= row; lstar++) {
+      star +="*";
+    }
+    for (let space = 1; space <= n-(2*row); space++) {
+      star +=" ";
+    }
+    for (let rstar = 1; rstar <= row; rstar++) {
+      star +="*";
+    }
+    console.log(star);
+  }
+}
+
+// function middle(n){
+//   for(let row = 1; row <=1; row++){
+//     let str = " ";
+//   for(let star = 1; star <= n; star++){
+//     str += "*";
+//   }
+//   console.log(str);
+//   }
+ 
+// }
+
+//no need of loop for 1 row
+function middle(n){
+    let str = " ";
+  for(let star = 1; star <= n; star++){
+    str += "*";
+  }
+  console.log(str);
+ 
+}
+
+function lower(n) {
+  for (let row = 1; row <= (n - 1) / 2; row++) {
+    let star = " ";
+    for (let lstar = 1; lstar <= ((n - 1) / 2)-row+1; lstar++) {
+      star += "*";
+    }
+    for (let space = 1; space <= (2 * row) - 1; space++) {
+      star += " ";
+    }
+    for (let rstar = 1; rstar <= (n - 1) / 2 - row + 1; rstar++) {
+      star += "*";
+    }
+    console.log(star);
+  }
+}
+
+
+function valley(n){
+  upper(n);
+  middle(n);
+}
+let pattern9 = valley(5);
+console.log(pattern9);
+
+function spacetriangledown(n) {
+  middle(n);
+  upper(n);
+}
+let pattern10 = spacetriangledown(5);
+console.log(pattern10);
+
+
+function butterfly(n) {
+  upper(n);
+  middle(n);
+  lower(n);
+}
+let pattern11 = butterfly(5);
+console.log(pattern11);
+
+function spacetriangleup(n) {
+ 
+  lower(n);
+  middle(n);
+}
+let pattern12 = spacetriangleup(5);
+console.log(pattern12);
+
+function spacetriangle(n) {
+  lower(n);
+  upper(n);
+}
+let pattern13 = spacetriangle(5);
+console.log(pattern13);
+
+
+function spac(n) {
+  upper(n);
+  lower(n);
+}
+let pattern14 = spac (5);
+console.log(pattern14);

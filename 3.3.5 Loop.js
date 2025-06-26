@@ -64,7 +64,7 @@ function printDecreasing(n) {
 console.log("print decreasing order");
 printDecreasing(20);
 
-// do while loop
+// do while loop - execute loop atleast once  even if the condition is false
 //while loop
 console.log("Do while loop"); //exit control
 let j = 1;
@@ -76,6 +76,13 @@ do {
   j++;
 } while (j <= 10);
 console.log("Loop ended");
+
+
+let y = 10;
+do{
+  y++;
+}while(y<15);
+console.log(y);
 
 // for loop
 console.log("for loop");

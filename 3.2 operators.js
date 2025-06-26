@@ -150,6 +150,8 @@ console.log(10 >> 1);// right shift
 console.log("unary operator");
 //requires only operand
 //++ increment by 1 unit
+console.log("unary increment operator");
+//1)assign 2)increment
 let a = 10;
 
 console.log(a);// a
@@ -157,7 +159,7 @@ console.log(a);// a
 console.log("a old value",a++);// post-increment - 1st returns a value before incrementing 2nd increment
 
 console.log('next step a increment',a);
-//increment after assignment
+//1)increment 2) assignment
 let g = a++;
 console.log("value of a & g after post increment: ",a,g);
 
@@ -184,19 +186,42 @@ e++;
 console.log("value of e & t after pre increment:", e, t);
 
 
-console.log('decrement')
+console.log('unary decrement operator')
+//1st assign 2nd decrement
 let c = 1;
-
 console.log(c);
-
 console.log(c--);// post-decrement - returns value before decrementing
-
 console.log(c);
 
 let d = 1;
 
 console.log(d);
-
 console.log(--d);// pre-decrement - returns value after decrementing
-
 console.log(d);
+
+console.log("+ unary plus")
+//tries to convert type a variable if its not already a number
+//does not change the original operator 
+//but returns converted value
+//string to number or invalid number NAN
+let p ="9";
+let v = +p;
+console.log(typeof p);
+console.log(typeof v);
+console.log(p);
+console.log(v);
+
+
+console.log("- unary plus");
+//tries to convert type a variable if its not already a number
+//does not change the original operator
+//but returns converted value & makes the result negative(negate)+ -> - or - -> +
+//string to number or invalid number NAN
+let r = "3";
+let i = -r;
+console.log(typeof r);
+console.log(typeof i);
+console.log(r);
+console.log(i);
+
+console.log("unary operators - !, typeof")
