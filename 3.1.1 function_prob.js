@@ -33,7 +33,7 @@ function oneLine(n) {
   // n=4,row = single row =1 ->  ****
   for (let row = 1; row <= 1; row++) {
     //loop to concatenate n star in each row
-    let star = " ";
+    let star = "";
     for (let col = 1; col <= n; col++) {
       star += "*";
     }
@@ -62,7 +62,7 @@ function printSquareStar(n) {
   //loop each row n=3 row =3
   for (let row = 1; row <= n; row++) {
     //inside row loop to concatenate star
-    let star = " ";
+    let star = "";
     for (let j = 1; j <= n; j++) {
       star += "*";
     }
@@ -91,7 +91,7 @@ function righttrianglepattern(n) {
   //loop row n = row =3
   for (let row = 1; row <= n; row++) {
     //inside row loop to concatenate star
-    let star = " ";
+    let star = "";
     for (let j = 1; j <= row; j++) {
       star += "*";
     }
@@ -118,7 +118,7 @@ function invertedtrianglepatternone(n) {
   //loop n= 4-> <3 space><1 space> row = 1 single row
   for (let row = 1; row <= 1; row++) {
     //inside row 1st loop to concatenate space
-    let spacestar = " ";
+    let spacestar = "";
     for (let cspace = 1; cspace <= n - row; cspace++) {
       spacestar += " ";
     } // at the end of loop will have 3space  concatenated
@@ -142,7 +142,7 @@ function invertedtrianglepattern(n) {
   //loop row n = row =3
   for (let row = 1; row <= n; row++) {
     // inside row 1st loop to concatenate space n- row
-    let spacestar = " ";
+    let spacestar = "";
     for (let cspace = 1; cspace <= n - row; cspace++) {
       spacestar += " ";
     } // at the end of loop will have 3space  concatenated
@@ -174,7 +174,7 @@ function trianglepattern(n) {
   //loop row n = row =3
   for (let row = 1; row <= n; row++) {
     // inside row 1st loop to concatenate space n- row
-    let spacestar = " ";
+    let spacestar = "";
     for (let cspace = 1; cspace <= n - row; cspace++) {
       spacestar += " ";
     } // at the end of loop will have 3space  concatenated
@@ -206,7 +206,7 @@ function pattern_6(n) {
   // n=4,row = n row =1
   for (let row = 1; row <= n; row++) {
     //loop to concatenate n star in each row
-    let star = " ";
+    let star = "";
     for (let col = 1; col <= n - row + 1; col++) {
       star += "*";
     }
@@ -238,7 +238,7 @@ console.log("Diamond pattern7");
 
 function upperTriangle(n) {
   for (let row = 1; row <= n; row++) {
-    let star = " ";
+    let star = "";
     for (space = 1; space <= n - row; space++) {
       star += " ";
     }
@@ -252,7 +252,7 @@ function upperTriangle(n) {
 function lowerTriangle(n) {
   //lower triangl has n-1 row
   for (let row = 1; row <= n - 1; row++) {
-    let star = " ";
+    let star = "";
     //in a row spaces = row
     for (space = 1; space <= row; space++) {
       star += " ";
@@ -300,7 +300,7 @@ console.log("Butterfly");
 
 function upper(n) {
   for (let row = 1; row <= (n - 1) / 2; row++) {
-    let star = " ";
+    let star = "";
     for (let lstar = 1; lstar <= row; lstar++) {
       star += "*";
     }
@@ -327,7 +327,7 @@ function upper(n) {
 
 //no need of loop for 1 row
 function middle(n) {
-  let str = " ";
+  let str = "";
   for (let star = 1; star <= n; star++) {
     str += "*";
   }
@@ -336,7 +336,7 @@ function middle(n) {
 
 function lower(n) {
   for (let row = 1; row <= (n - 1) / 2; row++) {
-    let star = " ";
+    let star = "";
     for (let lstar = 1; lstar <= (n - 1) / 2 - row + 1; lstar++) {
       star += "*";
     }
@@ -395,9 +395,115 @@ console.log(pattern14);
 
 console.log("2 Number pattern");
 
-//problem - given a value n print the following pattern
+//problem - given a value n print the following pattern (space & number)
 
-//
+//Approach 
+//2 parts
+//1st part - 
+//     1
+//    12
+//   123
+//  1234
+// 12345
+//for every row we have space & number - for every row -loop
+//inside row we have spaces -loop
+//inside row we print number until number
+
+function numtrialpattern15(n)
+{
+  for(let row = 1; row <= n; row ++){
+    let spacenum = "";
+    for (let spacecol = 1; spacecol <= n-row; spacecol++) {
+      spacenum += " ";}
+    for (let numcol = 1; numcol <= row; numcol++) {
+      spacenum += console.log(numcol)}
+    console.log(spacenum);
+  }
+}
+let failedpattern15 = numtrialpattern15(5);
+console.log(failedpattern15);
+
+//note use counter variable to add number 
+//attach number to str & increment
+// string += number -> concatenates number to string changes its type
+//1st part
+function numpattern15_1(n) {
+  for (let row = 1; row <= n; row++) {
+    let str = "";
+    for (let spacecol = 1; spacecol <= n - row; spacecol++) {str += " ";}
+    let counter = 1;
+    for (let numcol = 1; numcol <= row; numcol++) {
+      str += counter;
+      counter ++;
+    }
+    console.log(str);
+  }
+}
+let pattern15_1 = numpattern15_1(5); 
+console.log(pattern15_1);
+
+//2nd part  for loop decreasing number
+function numpattern15_2(n) {
+  for (let row = 1; row <= n; row++) {
+    let str = "";
+    let counter = row-1;
+    for (let numcol = 1; numcol <= row- 1; numcol++) {
+      str += counter;
+      counter--;
+    }
+    console.log(str);
+  }
+}
+let pattern15_2 = numpattern15_2(5);
+console.log(pattern15_2);
+ 
+//     1
+//    12
+//   123
+//  1234
+// 12345
+
+// 1
+// 21
+// 321
+// 4321
+function combinedTriangle(n) {
+  numpattern15_1(n);
+  numpattern15_2(n);
+}
+
+let pattern15 = combinedTriangle(5);
+console.log(pattern15);
+
+// inorder to combine the triangle combine both part in same loop
+//     1
+//    121
+//   12321
+//  1234321
+// 123454321
+
+function numpattern15(n) {
+  for (let row = 1; row <= n; row++) {
+    let str = "";
+    for (let spacecol = 1; spacecol <= n - row; spacecol++) {
+      str += " ";
+    }
+    let counter = 1;
+    for (let numcol = 1; numcol <= row; numcol++) {
+      str += counter;
+      counter++;
+    }
+    let counter2 = row - 1;
+    for (let numcol = 1; numcol <= row - 1; numcol++) {
+      str += counter2;
+      counter2--;
+    }
+    console.log(str);
+  }
+}
+let pattern_15 = numpattern15(5);
+console.log(pattern_15);
+
 
 //Quadratic problem
 //Given 3 number a,b,c which represent coefficient of quadratic equation
