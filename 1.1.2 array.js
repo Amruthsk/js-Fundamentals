@@ -1,3 +1,8 @@
+// What are arrays
+//array -ds that stores large number of data
+//way - orientation - Linear contionus orientation in memory space
+//ex: Images whenever there is large number of data saved in linear continous orientation there is a array
+
 // // creation of arrays 
 // var ar = [1,2,3,4,5,6] //best way
 // console.log(ar);
