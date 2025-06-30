@@ -504,6 +504,53 @@ function numpattern15(n) {
 let pattern_15 = numpattern15(5);
 console.log(pattern_15);
 
+//GCD problem
+//16- Given 2 number a & b find the greatest common factor of a,b
+
+//Approach
+//ip- 24,28 op-4
+//for d starting from 2 to min (a,b) - loop
+//check given a,b divisible by d - if else
+//return gcd at the end
+
+function greatestCommonDivisor(a,b){
+  let gcd = 1;
+  for(let d = 2; d <= Math.min(a,b);d++){
+    if (a % d == 0 && b % d == 0) {
+       gcd = d;
+    }
+  }
+  return gcd;
+}
+let p_16 = greatestCommonDivisor(24,28);
+console.log("gcd:",p_16);
+
+//sum of numbers problem
+//15- Given  number x calculate the sum of digits of x
+
+//Approach
+//ip- 4136 op-14
+//number -loop
+//extract no -  divide num by 10 - reminder - sum
+//eliminate the extracted number
+
+function sumOfNumbers(x){
+  let sum = 0;
+  while(x){
+    lastdigit = x%10 ;
+    sum += lastdigit;
+    x = Math.floor(x/10);
+
+  }
+  return sum
+
+}
+let x = 4136;
+let p_17 = sumOfNumbers(x);
+console.log(`sum of numbers of ${x} is : ${p_17}`);
+
+//Palindrome
+//Given the number x check if the number is a palindrome or not
 
 //Quadratic problem
 //Given 3 number a,b,c which represent coefficient of quadratic equation
