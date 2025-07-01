@@ -12,6 +12,10 @@ console.log(ar);
 //array - using index - access & updation of  value  possible - mutable - update
 //strings - access - cant update value - immutable hence dont updat
 
+// Index - positioning-unique mapping of characters of string to a unique no./position/unique mapping
+//q-start-0 , end - length - 1;
+//a-var[]; access & extract & update
+
 let ar1 = [];// empty array
 ar1[0] ='A';
 ar1[1] = "B";
@@ -117,8 +121,43 @@ for (let value of array){
 
 
 
-let string = "VIKRAM" // can acess value directly without tracking index,length
+let name = "VIKRAM" // can acess value directly without tracking index,length
 
-for (let char of string) {
+for (let char of name) {
   console.log(char);
 }
+
+//q- length
+console.log("length of string: ",name.length);
+
+//a -iterate all char through index
+for(let idx= 0; idx <=((name.length) - 1); idx++){
+  console.log("index with char : ",idx, name[idx])
+}
+
+//problem - check for palindrome for number
+
+//approach
+// numbers cannot be accessed as string individualy  -it cannot be transversed using indexes-  dont possess the access through indexes therefore- convert
+//check directly the given no. by comparing each end -if else
+//comparing process repeated for all the given numbers- loop
+
+function checkPalindrome(n){
+  //converting number to string
+  let str = ""+n;
+  let i = 0;
+  let j = (str.length)-1;
+  while(i<=j){
+    if(str[i]==str[j]){
+      i++;//move from s-> e
+      j--;//move from e -> s
+    }
+    //condition failed not palindrome
+    else{return false;}
+  }
+  //loop completed palindrome
+  return true;
+}
+
+let num = checkPalindrome(1591);
+console.log(num);

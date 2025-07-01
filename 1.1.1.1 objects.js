@@ -1,3 +1,7 @@
+// object - key value pair
+//{key1 : "v1",
+// key2 : number}
+
 //creation of object
 
 var obj = {
@@ -12,27 +16,53 @@ var obj = {
 
 console.log(obj);
 
-//penetrating
-var obj = {}
+//access key values
+//get element & update element
 
+//[]
+//.penetrating
+var obj = {} //empty obj
+
+
+//is obj mutable?
+//objects are mutable -updateable  
 obj.fname = 'jhon'
 obj.lname = 'wick'
+obj["age"] = 23 // put key as a string
 
 console.log(obj)
 
-// //picking specific element
-// console.log(obj.lname);
+//picking specific element 
+//Note: from key can access values but not vice a versa because keys are unique but values may come similar 
+console.log(obj.age);
+console.log(obj["fname"]);
 
-// using new keyword
-var obj = new Object();
 
-obj.fname = "jhon";
-obj.lname = "rick";
+//how to add a new property to an already created object
+obj.fname = "Don"; //- updates  if key present if key not present  - adds  a new key
+obj.company = "Fin";
 
 console.log(obj);
 
+//delete a key value pair?
+//delete operator
+delete obj.company;
+
+console.log(obj);
+
+
+
+// using new keyword - type object
+var obj2 = new Object();
+
+console.log(typeof obj2);
+obj2.fname = "jhon";
+obj2.lname = "rick";
+
+console.log(obj2);
+
 //picking specific element
-console.log(obj.lname);
+console.log(obj2.lname);
 
 let circle = {
   radius: 1,
