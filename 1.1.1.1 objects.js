@@ -64,6 +64,8 @@ console.log(obj2);
 //picking specific element
 console.log(obj2.lname);
 
+//for in loop to iterate over
+
 let circle = {
   radius: 1,
   location: {
