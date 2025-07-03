@@ -1,3 +1,15 @@
+//Basics of js
+
+//file-contains code - program
+//run
+//run program - inside Ram
+//-> Process - program in running state 
+//software (program)run - process - ram allocates(memory-storage area)
+
+
+
+
+
 var n =2;
 function square(num) {
     var ans = num * num;
