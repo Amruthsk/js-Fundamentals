@@ -69,30 +69,34 @@ console.log("not operator");
 console.log(!true);
 console.log(!false);
 
-//shortcircuiting - non-boolean values to  boolean values
+//falsy values?
+//null, undefined, ""- empty string, +0,-0,NaN,false
+//truthy values?
+//rest 
+//shortcircuiting -conversion+- non-boolean values to  boolean values
 console.log("shortcircuiting");
 //and shortcircuiting - returns first falsy value or last truthy value
 console.log("and shortcircuiting");
-console.log(10 && 30);//30
-console.log(0 && 30);//0
-console.log(10 && 0);//0
-console.log(0 && 0);//0
-console.log(40 && null);//null
-console.log(40 && undefined);//undefined
-console.log(40 && false);//false
-console.log("" && -0);//""
+console.log(10 && 30);//30 1st true see 2nd  - ans 2nd
+console.log(0 && 30);//0 1st false - ans- false
+console.log(10 && 0);//0 1st true see 2nd  - ans 2nd
+console.log(0 && 0);//0 1st false - ans- false
+console.log(40 && null);//null 1st true see 2nd  - ans 2nd
+console.log(40 && undefined);//undefined 1st true see 2nd  - ans 2nd
+console.log(40 && false);//false 1st true see 2nd  - ans 2nd
+console.log("" && -0);//"" 1st false - ans- false
 
 // conditional rendering - react used
 //or shortcircuiting - returns first truthy value or last falsy value
 console.log("or shortcircuiting");
-console.log(10 || 30);//10
-console.log(0 || 30);//30
-console.log(10 || 0);//10
-console.log(0 || 0);//0
-console.log(40 || null);//40
-console.log(40 || undefined);//40
-console.log(40 || false);//40
-console.log("" || -0);//-0
+console.log(10 || 30);//10 1st true return true - does not evaluate 2nd input
+console.log(0 || 30);//30 1st false see 2nd return false
+console.log(10 || 0);//10 1st true return true
+console.log(0 || 0);//0 1st false see 2nd return false
+console.log(40 || null);//40 1st true return true
+console.log(40 || undefined);//40 1st true return true
+console.log(40 || false);//40 1st true return true
+console.log("" || -0);//-0 1st false see 2nd return false
 
 // comparison operator
 console.log("comparison operator");
