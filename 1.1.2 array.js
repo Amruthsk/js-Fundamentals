@@ -143,11 +143,14 @@ for(let idx= 0; idx <=((name.length) - 1); idx++){
 //comparing process repeated for all the given numbers- loop
 
 function checkPalindrome(n){
+  if (n < 0) {
+    return false;
+  }
   //converting number to string
   let str = ""+n;
   let i = 0;
   let j = (str.length)-1;
-  while(i<=j){
+  while(i<=j){// two pointer method
     if(str[i]==str[j]){
       i++;//move from s-> e
       j--;//move from e -> s
@@ -161,3 +164,99 @@ function checkPalindrome(n){
 
 let num = checkPalindrome(1591);
 console.log(num);
+
+console.log(`Input: -1, Output: ${checkPalindrome(-1)}`); // Expected: false, Actual: true
+
+//number-d, check panlidrome-a, palindrome-q, non palindrom -ab
+
+//1) palindrome - no that reads the same forward & backward
+// function must take an integer x. It must return false for all negative numbers. For non-negative numbers, it must return true if its sequence of digits is identical when read forwards and backwards, and false otherwise.
+
+//2)Handle the edge case: If the number is negative, immediately return false.
+// Convert the number substance into a string quality.
+// Perform a series of action to reverse this new string.
+// Compare the original string with the reversed string.
+// Return the result of this comparison.
+
+//[Input: 121] --(toString → split → reverse → join)--> [Reversed: "121"] ⇄ ✅["121"]
+
+
+function isPalindrome(x){
+//check negative numbers
+  if(x<0){
+    return false;
+  }
+  //number -> string
+  const originalString = x.toString();
+  //split = string-> array
+  //reverse = reorders array
+  //join= array -> string
+  const reversedString = originalString.split('').reverse().join('');
+  //comparison
+  return originalString === reversedString;
+}
+
+console.log("Testing similar (should be true):");
+console.log(`Input: 121, Output: ${isPalindrome(121)}`); // Expected: true
+console.log(`Input: 7, Output: ${isPalindrome(7)}`);     // Expected: true
+console.log(`Input: 88, Output: ${isPalindrome(88)}`);    // Expected: true
+
+console.log("\nTesting non similar (should be false):");
+console.log(`Input: 123, Output: ${isPalindrome(123)}`); // Expected: false
+console.log(`Input: -121, Output: ${isPalindrome(-121)}`);// Expected: false
+console.log(`Input: 10, Output: ${isPalindrome(10)}`);   // Expected: false
+
+// Given an array which only contains 0s and 1s shuffled randomly, write a function that rearranges the data such that all 0s are present before all 1s.
+
+//array-unsorted-sorted-rearrang- class : array partition - two pointer method
+
+//sorted array-  assume k index  0 to k-1 index - 0 k to end index -1, empty array or array with 1 type - sorted array
+
+//left starting at the beginning, and right starting at the end.
+// The left pointer- find the first 1 that is out of place.
+// The right pointer- find the first 0 that is out of place.
+// When such a pair is found, the critical step is to swap their positions. This moves both elements closer to their correct final regions.
+// Continue this process until the pointers cross each other. 
+//[Array] ⇄ { [left] → (Swap ⇄ Mismatch) ← [right] } => [Sorted Array]
+
+function sortZerosAndOnes(arr){
+  //for empty array
+  if(arr.lenght <=1){
+    return arr;
+  }
+
+  //assign pointer
+  let left = 0;
+  let right = arr.length - 1;
+
+  //till pointer dont cross eachother
+  while(left < right){
+
+    while (arr[left] === 0 && left < right) {
+      left++;
+    }
+    while (arr[right] === 1 && left < right) {
+      right--;
+    }
+    if (left < right) {
+      // The Swap  using array destructuring .
+      [arr[left], arr[right]] = [arr[right], arr[left]];
+    
+      // Move pointers to continue the search.
+      left++;
+      right--;
+
+    }
+  return arr;
+  }
+
+}
+
+console.log("Testing a mixed array:");
+console.log(sortZerosAndOnes([0, 1, 0, 1, 1, 0])); // Expected: [0, 0, 0, 1, 1, 1]
+
+console.log("\nTesting edge cases:");
+console.log(sortZerosAndOnes([])); // Expected: []
+console.log(sortZerosAndOnes([1, 1, 0, 0])); // Expected: [0, 0, 1, 1]
+console.log(sortZerosAndOnes([0, 0, 0])); // Expected: [0, 0, 0]
+console.log(sortZerosAndOnes([1, 0])); // Expected: [0, 1]
