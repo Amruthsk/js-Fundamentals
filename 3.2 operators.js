@@ -229,3 +229,5 @@ console.log(r);
 console.log(i);
 
 console.log("unary operators - !, typeof")
+
+console.log ("Coercion")
