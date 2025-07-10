@@ -231,3 +231,20 @@ console.log(i);
 console.log("unary operators - !, typeof")
 
 console.log ("Coercion")
+// type conversion- convert the type of input for operation
+//converting - manual (explicit) / rules based- automatic(implicit) also know as coercion
+
+// important before coercion - abstract operation
+// Abstract operation - not a part of js-aid the specification of ECMA script
+//algorithm present in ecma script -  abstract operation is present in the ecma script docs but they are not avaialable for usage in ecmascript
+//abstract operation - we cannot use thes operations directly
+
+//aid the specification(rules) of ECMA script
+// help in documentation - internal language that does something- helps in internal working of js
+
+// To explain the internal details of how & what language is doing - we have abstract operation 
+
+//Abstract operation - js internally executes (we cannot use it )
+//what,why,how it does
+//implicitly - perform  automatic type conversion
+//ip- only ny valid js data type 
