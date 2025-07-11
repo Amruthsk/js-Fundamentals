@@ -230,7 +230,9 @@ console.log(i);
 
 console.log("unary operators - !, typeof")
 
-console.log ("Coercion")
+console.log(
+  "Coercion - coercion is a process triggered by operators acting on mismatched types"
+);
 // type conversion- convert the type of input for operation
 //converting - manual (explicit) / rules based- automatic(implicit) also know as coercion
 
@@ -244,7 +246,44 @@ console.log ("Coercion")
 
 // To explain the internal details of how & what language is doing - we have abstract operation 
 
-//Abstract operation - js internally executes (we cannot use it )
+//Abstract operation - js internally executes (we cannot use it/we cannot call it )
 //what,why,how it does
 //implicitly - perform  automatic type conversion
 //ip- only ny valid js data type 
+//data type conversion
+// To Primitive, To Boolean, To string, To number....
+
+console.log("ToNumber")
+console.log("spend time understanding what js wants to say - learn documentation");
+console.log("Understand type conversion - Abstract operation -u cannot use it - js uses it internally to visualize what goes internally inside the js");
+
+// converts diff data type argument to value type number
+
+// Tonumber - set of rules followed when trying to convert argument into number
+// js executes  following the rules - ECMA script developers who set the rules - possible logical way -choice of js developers - no wierd stuffs
+//ip- undefined -> NaN
+//ip-Null -> return+0 ->0
+//ip bool - true - op -1, ip false->op-0
+
+//example - subraction - given argument -number - js abstract operation converts the given argument toNumber
+
+console.log(10-null); // null - 0 ->10
+console.log(10-undefined); //undefined- NaN -> NaN
+ 
+//ToNumber(10);// reference error not availabe to executed by us but js can use
+console.log(2-7); // - 5
+console.log(2-null); //2- null-> 2 - 0 ->2
+console.log(2-undefined); //2-undefined-> 2- NaN -> NaN
+console.log(2 - true);//boolean ,  2-1 -> 1
+console.log(2 - false);//boolean ,  2-0 -> 2
+
+//string to number  only for subraction toNumber ^ the data type
+console.log(11 - "8"); // 3
+console.log("8" + 1); //  81
+console.log(1 + "8");//18
+console.log("11" - "8");//3
+console.log("11" - "2");//9
+console.log("11" - 2);//9
+console.log(11 - "232df");// 11- NaN ->NaN
+console.log(11- "0xa")//1  hexadecimal number system- 0x" denotes a hexadecimal number - uses 16 unique symbols: the digits 0-9 and the letters A-F
+
