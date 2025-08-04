@@ -287,3 +287,14 @@ console.log("11" - 2);//9
 console.log(11 - "232df");// 11- NaN ->NaN
 console.log(11- "0xa")//1  hexadecimal number system- 0x" denotes a hexadecimal number - uses 16 unique symbols: the digits 0-9 and the letters A-F
 
+
+// "important everything is mentioned in the documentation. give me the access of the documentation. I will tell you the answer of the operation"
+
+// "expected to understand and where to find"
+
+
+console.log("!ToPrimitive abstract operation - not for end user" );
+console.log("Toprimitive(input,preferred types)  ---> converts the input to non object type(number,string,boolean)")
+
+
+ 
